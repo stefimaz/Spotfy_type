@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Album = () => {
-  
+
+  const { state: album } = useLocation();
   return (
-  <>
-  <div className="container">
-  <Link to="/" className="link">Home</Link>
-  </div>
-  </>
-)
+    <>
+      <button onClick={() => console.log(album)}>hi</button>
+    </>
+  )
 }
 
 export default Album;
